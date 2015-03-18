@@ -1,0 +1,20 @@
+<div class="input-field ">
+       <i class="mdi-action-search prefix"></i>
+        <input ng-model="searchText" id="search" type="text" class="validate">
+        <label for="search">Search a drink</label>
+ </div>
+ <div ng-repeat="cocktail in datas.cocktails | filter:searchText " class="col s12">
+   <div class="card-panel grey lighten-5 z-depth-1" ng-click="goToCocktail($index)" style="cursor: pointer;">
+     <div class="row valign-wrapper">
+       <div class="col s3">
+         <img ng-src="photos/{{cocktail.img}}" alt="" class="circle responsive-img" ></img>
+       </div>
+       <div class="col s9 center">
+          <h3>{{cocktail.name}}</h3>
+          <a ng-repeat="ingre in cocktail.ing" class="btn disabled" style="margin:2px;">
+            {{datas.ingredients[ingre]}}
+          </a>
+       </div>
+     </div>
+   </div>
+ </div>

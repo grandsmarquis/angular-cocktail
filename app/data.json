@@ -1,0 +1,17 @@
+{
+  "ingredients" : [
+    "Rum",
+    "Martini Rosso",
+    "Orange",
+    "Lime",
+    "Apple",
+    "Pear",
+    "Vodka"
+  ],
+  "cocktails" : [
+    {"name" : "Martini Orange", "glass" : "flute", "img" : "martiniorange.jpg", "ing" : [1, 2, 3]},
+    {"name" : "Clement Boost", "glass" : "flute", "img" : "clementboost.jpg", "ing" : [0, 3, 4, 5]},
+    {"name" : "Vodka Orange", "glass" : "flute", "img" : "vo.jpg", "ing" : [2, 6]}
+
+  ]
+}

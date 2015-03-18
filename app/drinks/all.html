@@ -1,0 +1,17 @@
+<div class="row">
+  <div ng-repeat="cocktail in datas.cocktails" class="col s12">
+    <div class="card-panel grey lighten-5 z-depth-1" ng-click="goToCocktail($index)" style="cursor: pointer;">
+      <div class="row valign-wrapper">
+        <div class="col s3">
+          <img ng-src="photos/{{cocktail.img}}" alt="" class="circle responsive-img" ></img>
+        </div>
+        <div class="col s9 center">
+          <h4>{{cocktail.name}}</h4>
+          <a ng-repeat="ingre in cocktail.ing" class="btn disabled" style="margin:2px;">
+            {{datas.ingredients[ingre]}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

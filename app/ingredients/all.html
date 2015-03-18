@@ -1,0 +1,24 @@
+<div class="row center">
+  I want a mix containing:
+</div>
+<div class="row center">
+  <a ng-repeat="ingredients in datas.ingredients" class="btn-large waves-effect waves-light grey"  ng-class="{ 'lighten-4 ': isSelected($index), 'black-text ': isSelected($index)}" style="margin:3px;"  ng-click="select($index, ingredients)">
+    {{ingredients}}
+  </a>
+</div>
+
+<div ng-repeat="cocktail in datas.cocktails | selectedIngredients:selected" class="col s12">
+  <div class="card-panel grey lighten-5 z-depth-1" ng-click="goToCocktail($index)" style="cursor: pointer;">
+    <div class="row valign-wrapper">
+      <div class="col s3">
+        <img ng-src="photos/{{cocktail.img}}" alt="" class="circle responsive-img" ></img>
+      </div>
+      <div class="col s9 center">
+         <h3>{{cocktail.name}}</h3>
+         <a ng-repeat="ingre in cocktail.ing" class="btn disabled" style="margin:2px;">
+           {{datas.ingredients[ingre]}}
+         </a>
+      </div>
+    </div>
+  </div>
+</div>
